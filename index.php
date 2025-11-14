@@ -2,10 +2,12 @@
 
 require 'vendor/autoload.php';
 
-use MongoD\Client;
+use MongoDB\Client;
 
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
 
-$uri = "mongodb://localhost:27017/lcl-srv";
+$uri = $_ENV['MONGODB_URI'];
 // echo $uri;
 if ($uri === false || $uri === '') {
     throw new RuntimeException('Set the MONGODB_URI environment variable to your Atlas URI');

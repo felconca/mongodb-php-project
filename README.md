@@ -26,8 +26,11 @@ require 'vendor/autoload.php';
 
 use MongoD\Client;
 
-$uri = "mongodb://localhost:27017/lcl-srv";
-// echo $uri;
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
+$uri = $_ENV['MONGODB_URI'];
+
 if ($uri === false || $uri === '') {
     throw new RuntimeException('Set the MONGODB_URI environment variable to your Atlas URI');
 }
@@ -57,8 +60,11 @@ require 'vendor/autoload.php';
 
 use MongoDB\Client;
 
-$uri = "mongodb://localhost:27017/lcl-srv";
-// echo $uri;
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
+$uri = $_ENV['MONGODB_URI'];
+
 if ($uri === false || $uri === '') {
     throw new RuntimeException('Set the MONGODB_URI environment variable to your Atlas URI');
 }
@@ -88,8 +94,11 @@ require "vendor/autoload.php";
 use MongoDB\BSON\ObjectID;
 use MongoDB\Client;
 
-$uri = "mongodb://localhost:27017/lcl-srv";
-// echo $uri;
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
+$uri = $_ENV['MONGODB_URI'];
+
 if ($uri === false || $uri === '') {
     throw new RuntimeException('Set the MONGODB_URI environment variable to your Atlas URI');
 }
@@ -123,8 +132,11 @@ require "vendor/autoload.php";
 use MongoDB\BSON\ObjectID;
 use MongoDB\Client;
 
-$uri = "mongodb://localhost:27017/lcl-srv";
-// echo $uri;
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
+$uri = $_ENV['MONGODB_URI'];
+
 if ($uri === false || $uri === '') {
     throw new RuntimeException('Set the MONGODB_URI environment variable to your Atlas URI');
 }
@@ -149,8 +161,11 @@ require "vendor/autoload.php";
 use MongoDB\BSON\ObjectID;
 use MongoDB\Client;
 
-$uri = "mongodb://localhost:27017/lcl-srv";
-// echo $uri;
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
+$uri = $_ENV['MONGODB_URI'];
+
 if ($uri === false || $uri === '') {
     throw new RuntimeException('Set the MONGODB_URI environment variable to your Atlas URI');
 }
