@@ -4,7 +4,6 @@ require "vendor/autoload.php";
 use MongoDB\BSON\ObjectID;
 use MongoDB\Client;
 
-
 $uri = "mongodb://localhost:27017/lcl-srv";
 // echo $uri;
 if ($uri === false || $uri === '') {
@@ -12,7 +11,7 @@ if ($uri === false || $uri === '') {
 }
 $client = new Client($uri);
 $collection = $client->sample_mflix->movies;
-$id = new ObjectID("6916bef3e21b000038001ea3"); // use if _id is object id 
+$id = new ObjectID("6916bef3e21b000038001ea3"); // use only if you use default id format ObjectId
 $data = [
     "name" => "movie name",
     "published" => "2024"

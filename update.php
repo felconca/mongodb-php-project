@@ -4,7 +4,6 @@ require "vendor/autoload.php";
 use MongoDB\BSON\ObjectID;
 use MongoDB\Client;
 
-
 $uri = "mongodb://localhost:27017/lcl-srv";
 // echo $uri;
 if ($uri === false || $uri === '') {
