@@ -1,14 +1,14 @@
 <?php
-
 require 'vendor/autoload.php';
 
+use MongoDB\Client;
 
 $uri = "mongodb://localhost:27017/lcl-srv";
 // echo $uri;
 if ($uri === false || $uri === '') {
     throw new RuntimeException('Set the MONGODB_URI environment variable to your Atlas URI');
 }
-$client = new MongoDB\Client($uri);
+$client = new Client($uri);
 $collection = $client->sample_mflix->movies;
 
 // insert one document
